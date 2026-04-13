@@ -1,0 +1,56 @@
+app:
+  hotkey: F10
+  enable_hotkeys: false
+  primary_backend: deepgram
+  fallback_backend: whisper_cpp
+  keep_recordings: false
+  log_level: INFO
+  paste_on_finalize: true
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  dtype: int16
+  blocksize: 1600
+
+deepgram:
+  model: nova-3
+  language: en-US
+  interim_results: true
+  endpointing_ms: 300
+  utterance_end_ms: 1000
+  punctuate: true
+  smart_format: true
+  encoding: linear16
+  connect_timeout_seconds: 8.0
+  close_timeout_seconds: 4.0
+
+whisper_cpp:
+  binary_path: tools/whispercpp/whisper-cli.exe
+  model_path: models/ggml-base.en.bin
+  language: en
+  threads: 4
+  translate: false
+  no_speech_threshold: 0.72
+  suppress_non_speech: true
+
+overlay:
+  width: 520
+  height: 180
+  margin_x: 28
+  margin_y: 28
+  alpha: 0.94
+  font_family: Segoe UI
+  font_size: 13
+  status_font_size: 10
+
+output:
+  mode: clipboard_paste
+  paste_delay_ms: 120
+  restore_focus: true
+  restore_clipboard: true
+
+cleanup:
+  normalize_whitespace: true
+  capitalize_first_letter: true
+  strip_text: true

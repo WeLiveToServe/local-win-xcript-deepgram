@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.wav
+*.log
+.env
+.pytest_cache/
+build/
+dist/
+src/*.egg-info/
+models/*.bin
+tools/whispercpp/
+runtime/
+

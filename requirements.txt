@@ -1,0 +1,6 @@
+PyYAML>=6.0.2
+python-dotenv>=1.0.1
+sounddevice>=0.5.1
+websocket-client>=1.8.0
+pytest>=8.3.5
+
